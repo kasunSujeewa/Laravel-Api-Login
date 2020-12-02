@@ -21,4 +21,5 @@ Route::group(['middleware' => ['api', 'allApi']], function ($routes) {
 Route::middleware('auth:api')->group(function () {
     Route::get('logout', 'AuthController@logout');
     Route::get('user', 'AuthController@user');
+    Route::get('currentUser', 'AuthController@CurrentAuthUser');
 });

@@ -102,4 +102,8 @@ class AuthController extends Controller
     {
         return response()->json(User::all());
     }
+    public function CurrentAuthUser()
+    {
+        return response()->json(Auth::user());
+    }
 }
